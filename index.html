@@ -12,15 +12,29 @@
 </head>
 <body>
   <header class="header" id="home">
+    <div class="top-bar">
+      <div class="top-bar__left">
+        <span class="pulse"></span>
+        <span>Open Mon–Sat: 9:00 AM – 6:00 PM</span>
+      </div>
+      <div class="top-bar__right">
+        <a href="tel:+919995036746">Call 99950 36746</a>
+        <span class="divider"></span>
+        <a href="https://maps.app.goo.gl/YdhBpZ11DJpamemo9?g_st=ipc" target="_blank" rel="noreferrer">Find us on Maps</a>
+      </div>
+    </div>
     <div class="nav-container">
-      <div class="logo">Suresmile Dental Clinic</div>
+      <div class="brand">
+        <div class="logo-mark" aria-hidden="true">SD</div>
+        <div class="logo">Suresmile Dental Clinic</div>
+      </div>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav class="nav" aria-label="Primary">
-        <a href="#home">Home</a>
+        <a href="#hero" class="active">Home</a>
         <a href="#services">Services</a>
         <a href="#doctor">Our Doctor</a>
         <a href="#testimonials">Testimonials</a>
@@ -32,7 +46,9 @@
 
   <main>
     <section class="hero" id="hero">
-      <div class="hero-content">
+      <div class="floating-blob blob-1"></div>
+      <div class="floating-blob blob-2"></div>
+      <div class="hero-content glass">
         <div class="eyebrow">Welcome to Suresmile Dental Clinic</div>
         <h1>Your Smile, Our Precision</h1>
         <p>Gentle, modern dental care for you and your family in a calming, friendly environment.</p>
@@ -45,9 +61,26 @@
           <div>Advanced diagnostics</div>
           <div>Comfort-first dentistry</div>
         </div>
+        <div class="hero-metrics">
+          <div>
+            <strong>15+</strong>
+            <span>Years of trusted care</span>
+          </div>
+          <div>
+            <strong>4.9★</strong>
+            <span>Patient satisfaction</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Emergency guidance</span>
+          </div>
+        </div>
       </div>
       <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a2?auto=format&fit=crop&w=1800&q=80" alt="Dentist with patient" loading="lazy">
+        <img src="assets/images/hero-illustration.svg" alt="Dentist with patient" loading="lazy">
+        <div class="pill">Precision orthodontics</div>
+        <div class="pill">Pain-free whitening</div>
+        <div class="pill">Family smiles</div>
       </div>
     </section>
 
@@ -82,7 +115,7 @@
       </div>
       <div class="service-grid">
         <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1588776814666-9044a40d2a8e?auto=format&fit=crop&w=1400&q=80" alt="Invisalign">
+          <img src="assets/images/service-illustration.svg" alt="Invisalign care">
           <div class="service-content">
             <h3>Invisalign</h3>
             <p>Virtually invisible aligners tailored for a comfortable, confident smile.</p>
@@ -90,7 +123,7 @@
           </div>
         </article>
         <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1400&q=80" alt="Braces">
+          <img src="assets/images/service-illustration.svg" alt="Braces">
           <div class="service-content">
             <h3>Braces</h3>
             <p>Metal and ceramic options guided with precision for faster results.</p>
@@ -98,7 +131,7 @@
           </div>
         </article>
         <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?auto=format&fit=crop&w=1400&q=80" alt="Teeth Whitening">
+          <img src="assets/images/service-illustration.svg" alt="Teeth Whitening">
           <div class="service-content">
             <h3>Teeth Whitening</h3>
             <p>Brighten safely with clinically proven whitening that protects enamel.</p>
@@ -106,7 +139,7 @@
           </div>
         </article>
         <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1588774069161-9b4b89394f23?auto=format&fit=crop&w=1400&q=80" alt="Smile Makeover">
+          <img src="assets/images/service-illustration.svg" alt="Smile Makeover">
           <div class="service-content">
             <h3>Smile Makeover</h3>
             <p>Comprehensive aesthetic planning for balanced, natural-looking smiles.</p>
@@ -114,7 +147,7 @@
           </div>
         </article>
         <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80" alt="Root Canal">
+          <img src="assets/images/service-illustration.svg" alt="Root Canal">
           <div class="service-content">
             <h3>Root Canal Treatment</h3>
             <p>Painless care using advanced anesthesia for quick, comfortable recovery.</p>
@@ -122,7 +155,7 @@
           </div>
         </article>
         <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80" alt="Children dentistry">
+          <img src="assets/images/service-illustration.svg" alt="Children dentistry">
           <div class="service-content">
             <h3>Children’s Dentistry</h3>
             <p>Gentle visits that keep kids relaxed while building healthy habits.</p>
@@ -139,7 +172,7 @@
       </div>
       <div class="doctor-card">
         <div class="doctor-photo">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" alt="Dr. Priya Menon">
+          <img src="assets/images/doctor-illustration.svg" alt="Dr. Priya Menon">
         </div>
         <div class="doctor-info">
           <h3>Dr. Priya Menon</h3>
@@ -202,10 +235,10 @@
         <h2>Inside Our Clinic</h2>
       </div>
       <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1629904853690-1c0c9f6fbd11?auto=format&fit=crop&w=1800&q=80" alt="Clinic reception">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1800&q=80" alt="Dental chair">
-        <img src="https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1800&q=80" alt="Waiting area">
-        <img src="https://images.unsplash.com/photo-1629904853690-1c0c9f6fbd11?auto=format&fit=crop&w=1800&q=80" alt="Bright hallway">
+        <img src="assets/images/gallery-illustration-1.svg" alt="Clinic reception">
+        <img src="assets/images/gallery-illustration-2.svg" alt="Dental chair">
+        <img src="assets/images/gallery-illustration-1.svg" alt="Waiting area">
+        <img src="assets/images/gallery-illustration-2.svg" alt="Bright hallway">
       </div>
     </section>
 
@@ -263,23 +296,6 @@
     </div>
   </footer>
 
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !expanded);
-      nav.classList.toggle('open');
-    });
-
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="/js/script.js" defer></script>
 </body>
 </html>

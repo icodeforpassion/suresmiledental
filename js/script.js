@@ -1,23 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger');
-  const navList = document.querySelector('nav ul');
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav a');
   const yearEl = document.querySelector('#year');
 
-  if (burger && navList) {
-    burger.addEventListener('click', () => {
-      navList.classList.toggle('open');
-      burger.setAttribute('aria-expanded', navList.classList.contains('open'));
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', (!expanded).toString());
+      nav.classList.toggle('open');
     });
 
-    burger.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        burger.click();
-      }
-    });
-
-    navList.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navList.classList.remove('open'));
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
@@ -25,14 +23,40 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  const header = document.querySelector('header');
-  if (header) {
-    const observer = new IntersectionObserver(([entry]) => {
-      header.classList.toggle('shadow', !entry.isIntersecting);
+  // Highlight active section in the nav
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const activeId = entry.target.getAttribute('id');
+        navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`));
+      }
     });
-    const sentinel = document.createElement('div');
-    sentinel.setAttribute('aria-hidden', 'true');
-    header.before(sentinel);
-    observer.observe(sentinel);
+  }, { rootMargin: '-40% 0px -40% 0px', threshold: 0.3 });
+
+  sections.forEach(section => observer.observe(section));
+
+  // Subtle parallax for hero pills
+  const pills = document.querySelectorAll('.pill');
+  if (pills.length) {
+    window.addEventListener('mousemove', (event) => {
+      const x = (event.clientX / window.innerWidth - 0.5) * 10;
+      const y = (event.clientY / window.innerHeight - 0.5) * 10;
+      pills.forEach((pill, idx) => {
+        const intensity = idx + 1;
+        pill.style.transform = `translate(${x / intensity}px, ${y / intensity}px)`;
+      });
+    });
   }
+
+  // Smooth scroll for anchor links
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 });

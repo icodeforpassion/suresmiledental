@@ -1,0 +1,19 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Doctor illustration">
+  <defs>
+    <linearGradient id="docBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0f9ff" />
+      <stop offset="1" stop-color="#cbe7ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#docBg)"/>
+  <circle cx="320" cy="220" r="160" fill="#fff" opacity="0.45"/>
+  <circle cx="920" cy="200" r="200" fill="#fff" opacity="0.28"/>
+  <path d="M520 360c0-110 70-180 160-180s160 70 160 180c0 140-110 240-160 320-50-80-160-180-160-320z" fill="#fff" stroke="#0e5854" stroke-width="12"/>
+  <circle cx="620" cy="360" r="46" fill="#0e5854" opacity="0.8"/>
+  <circle cx="780" cy="360" r="46" fill="#0e5854" opacity="0.8"/>
+  <rect x="640" y="450" width="120" height="40" rx="12" fill="#0e5854" opacity="0.6"/>
+  <path d="M620 540c30 30 90 30 120 0" stroke="#0e5854" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <rect x="520" y="560" width="320" height="140" rx="40" fill="#0e5854" opacity="0.16"/>
+  <rect x="560" y="580" width="240" height="100" rx="28" fill="#fff" opacity="0.94"/>
+  <rect x="600" y="600" width="160" height="60" rx="18" fill="#0e5854" opacity="0.6"/>
+</svg>
